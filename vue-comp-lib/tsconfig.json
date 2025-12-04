@@ -1,3 +1,4 @@
+// vue component library
 {
   "compilerOptions": {
     // Language and Environment
@@ -16,10 +17,11 @@
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "./dist/types",
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": true, // only emit types not the js files
     "sourceMap": true,
     "outDir": "./dist",
     "removeComments": false,
+    
     
     // Interop Constraints
     "isolatedModules": true,
