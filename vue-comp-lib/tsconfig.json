@@ -1,52 +1,22 @@
-// vue component library
+// this will require @vue/tsconfig package
 {
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    // Language and Environment
-    "target": "ES2024",
-    "lib": ["ES2024", "DOM", "DOM.Iterable"],
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
+
     
-    // Modules
-    "module": "ES2020",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-    
-    // Emit
+    "composite": true,
     "declaration": true,
     "declarationMap": true,
-    "declarationDir": "./dist/types",
-    "emitDeclarationOnly": true, // only emit types not the js files
-    "sourceMap": true,
-    "outDir": "./dist",
-    "removeComments": false,
     
+    "noEmit": true,
     
-    // Interop Constraints
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    
-    // Type Checking
-    "strict": true,
+    // Additional strictness for library code
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": false,
     
-    // Completeness
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    
-    // Vue Specific
-    "types": ["vue", "node"],
-    "allowJs": true,
-    
-    // Path Mapping (adjust as needed)
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
@@ -54,7 +24,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
+    "src/**/*.tsx", 
     "src/**/*.vue",
     "src/**/*.d.ts"
   ],
