@@ -1,3 +1,4 @@
+// Node js based libraries
 {
   "compilerOptions": {
     // Language and Environment
@@ -5,23 +6,26 @@
     "lib": ["ES2024"],
     "module": "ESNext",
     "moduleResolution": "bundler",
-    
+
     // Type Checking
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
     "noImplicitOverride": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": true,
-    
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
     // Module System
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    
+
     // Emit
     "declaration": true,
     "declarationMap": true,
@@ -29,29 +33,22 @@
     "removeComments": false,
     "outDir": "./dist",
     "rootDir": "./src",
-    
+
     // Node.js Specific
     "types": ["node"],
-    
+
     // Interop Constraints
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    
+
     // Path Mapping
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  
-  "include": [
-    "src/**/*.ts"
-  ],
-  
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts",
-    "**/*.spec.ts"
-  ]
+
+  "include": ["src/**/*.ts"],
+
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }
