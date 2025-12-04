@@ -1,27 +1,25 @@
-// for vue lib that wont have .vue files onyl for pure logic and plugins
+// For vue libraries that dont export vue component. Use this with a bundler like tsdown or tsup (JS bundling will be handled by bundler)
 {
   "compilerOptions": {
     "target": "ES2024",
     "lib": ["ES2024", "DOM", "DOM.Iterable"],
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
 
-    "module": "ES2020",
+    "module": "preserve",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
 
     "declaration": true,
     "declarationMap": true,
+    "emitDeclarationOnly": true,
     "declarationDir": "./dist/types",
-    "sourceMap": true,
-    "outDir": "./dist",
     "removeComments": false,
 
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true, // Recommended for modern TS
 
     "strict": true,
     "noUnusedLocals": true,
@@ -29,18 +27,14 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": false,
 
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
 
-    "types": ["vue"],
-    "allowJs": true,
+    "types": [], 
 
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-      // add other import alias
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"],
