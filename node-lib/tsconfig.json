@@ -1,4 +1,3 @@
-// this is for pure ts lib projects
 {
   "compilerOptions": {
     // Language and Environment
@@ -6,13 +5,7 @@
     "lib": ["ES2024"],
     "module": "ESNext",
     "moduleResolution": "bundler",
-
-    // Module System
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-
+    
     // Type Checking
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -22,29 +15,43 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": true,
-
+    
+    // Module System
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    
     // Emit
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "removeComments": false,
-    "importHelpers": false,
-    "downlevelIteration": true,
-
+    "outDir": "./dist",
+    "rootDir": "./src",
+    
+    // Node.js Specific
+    "types": ["node"],
+    
     // Interop Constraints
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-
+    
     // Path Mapping
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    },
-
-    // Project Structure
-    "rootDir": "./src",
-    "outDir": "./dist"
+    }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+  
+  "include": [
+    "src/**/*.ts"
+  ],
+  
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
 }
