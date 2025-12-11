@@ -1,4 +1,4 @@
-# node-tsdown
+# node-tsdown 1
 
 This setup will bundle and give a single js file.
 either minified or not minified

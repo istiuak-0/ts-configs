@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --noEmit && tsdown"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "tsdown": "^0.17.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

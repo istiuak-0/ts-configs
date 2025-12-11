@@ -1,0 +1,13 @@
+import { defineConfig } from 'tsdown';
+
+export default defineConfig({
+  entry: ['src/index.ts'],
+  skipNodeModulesBundle: true,
+  shims: true,
+  unbundle:true,
+  format: {
+    esm: {
+      target: ['node22'],
+    },
+  },
+});
